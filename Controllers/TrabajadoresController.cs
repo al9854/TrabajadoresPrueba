@@ -69,12 +69,12 @@ namespace MantenimientoTrabajadores.Controllers
             var departamentoExists = await _departamentoRepository.ObtenerPorId(id);
             if (departamentoExists == null)
             {
-                return NotFound("La provincia no está registrada.");
+                return NotFound("El departamento no está registrado.");
             }
             var distritoExists = await _distritoRepository.ObtenerPorId(id);
             if (distritoExists == null)
             {
-                return NotFound("La provincia no está registrada.");
+                return NotFound("El distrito no está registrado.");
             }
 
             _mapper.Map(trabajador, trabajadorEnBD);
