@@ -10,6 +10,5 @@ namespace MantenimientoTrabajadores.Dominio.Interfaces
         Task Insertar(Provincia provincia);
         Task Actualizar(Provincia provincia);
         Task Eliminar(int id);
-        Task<bool> Existe(string nombreProvincia);
     }
 }

@@ -61,17 +61,17 @@ namespace MantenimientoTrabajadores.Controllers
 
             // Verificar si el Departamento, Provincia y Distrito existen
 
-            var provinciaExists = await _provinciaRepository.ObtenerPorId(id);
+            var provinciaExists = await _provinciaRepository.ObtenerPorId(trabajador.IdProvincia);
             if (provinciaExists == null)
             {
                 return NotFound("La provincia no está registrada.");
             }
-            var departamentoExists = await _departamentoRepository.ObtenerPorId(id);
+            var departamentoExists = await _departamentoRepository.ObtenerPorId(trabajador.IdDepartamento);
             if (departamentoExists == null)
             {
                 return NotFound("El departamento no está registrado.");
             }
-            var distritoExists = await _distritoRepository.ObtenerPorId(id);
+            var distritoExists = await _distritoRepository.ObtenerPorId(trabajador.IdDistrito);
             if (distritoExists == null)
             {
                 return NotFound("El distrito no está registrado.");

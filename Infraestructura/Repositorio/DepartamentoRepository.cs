@@ -48,9 +48,5 @@ namespace MantenimientoDepartamentoes.Infraestructura.Repositorio
             await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> Existe(string nombreDepartamento)
-        {
-            return await _context.Departamento.AnyAsync(p => p.NombreDepartamento == nombreDepartamento);
-        }
     }
 }

@@ -10,6 +10,5 @@ namespace MantenimientoTrabajadores.Dominio.Interfaces
         Task Insertar(Departamento Departamento);
         Task Actualizar(Departamento Departamento);
         Task Eliminar(int id);
-        Task<bool> Existe(string nombreDepartamento);
     }
 }

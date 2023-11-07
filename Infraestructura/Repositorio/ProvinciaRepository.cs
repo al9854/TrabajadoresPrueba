@@ -44,9 +44,5 @@ namespace MantenimientoProvinciaes.Infraestructura.Repositorio
             await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> Existe(string nombreProvincia)
-        {
-            return await _context.Provincia.AnyAsync(p => p.NombreProvincia == nombreProvincia);
-        }
     }
 }

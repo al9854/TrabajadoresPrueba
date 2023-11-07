@@ -44,9 +44,5 @@ namespace MantenimientoDistritoes.Infraestructura.Repositorio
             await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> Existe(string nombreDistrito)
-        {
-            return await _context.Distrito.AnyAsync(p => p.NombreDistrito == nombreDistrito);
-        }
     }
 }

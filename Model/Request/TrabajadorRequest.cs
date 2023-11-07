@@ -12,8 +12,8 @@ namespace MantenimientoTrabajadores.Model.Request
         [RegularExpression("^[MFmf]$")] // Asegura que el valor sea 'M' o 'F' (mayúscula o minúscula)
         public string? Sexo { get; set; }
 
-        public int? IdDepartamento { get; set; }
-        public int? IdProvincia { get; set; }
-        public int? IdDistrito { get; set; }
+        public int IdDepartamento { get; set; }
+        public int IdProvincia { get; set; }
+        public int IdDistrito { get; set; }
     }
 }
